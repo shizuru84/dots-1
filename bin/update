@@ -1,0 +1,32 @@
+#! /bin/sh
+#
+# Update - Updates repo to local setup
+
+# Functions
+successfulCommand () {
+    if [ $? -eq 0 ]; then
+        true
+    else
+        false
+    fi
+}
+
+# Header
+echo -e '\e[34mUpdating Dotfiles:\e[0m'
+
+# Wallpapers
+cp ~/Wallpapers/* ~/.dotfiles/wallpaper/
+if [ successfulCommand ]; then
+    echo -e '\e[32m[✓] Wallpapers Updated\e[0m'
+else 
+    echo -e '\e[31m[X] Wallpapers Failed$\e[0m'
+fi
+
+# Scripts
+cp ~/.scripts/* ~/.dotfiles/bin/
+if [ successfulCommand ]; then
+    echo -e '\e[32m[✓] Bin Updated\e[0m'
+else
+    echo -e '\e[31m[X] Bin Failed$\e[0m'
+fi
+
