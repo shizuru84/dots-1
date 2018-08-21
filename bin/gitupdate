@@ -60,6 +60,30 @@ updateRepo () {
             *)  FAIL "Openbox"
                 ;;
         esac
+    elif [ $1 = "Compton" ]; then
+        cp ~/.config/compton.conf ~/.dotfiles/compton &>/dev/null
+        case $? in
+            0)  PASS "Compton"
+                ;;
+            *)  FAIL "Compton"
+                ;;
+        esac
+    elif [ $1 = "Mpd" ]; then
+        cp ~/.mpd/mpd.conf ~/.dotfiles/mpd &>/dev/null
+        case $? in
+            0)  PASS "Mpd"
+                ;;
+            *)  FAIL "Mpd"
+                ;;
+        esac
+    elif [ $1 = "Ncmpcpp" ]; then
+        cp ~/.ncmpcpp/config ~/.dotfiles/ncmpcpp &>/dev/null
+        case $? in 
+            0)  PASS "Ncmpcpp"
+                ;;
+            *)  PASS "Ncmpcpp"
+                ;;
+        esac
     fi
 }
 
@@ -80,3 +104,9 @@ sleep $(($RANDOM % 10))
 updateRepo "OBThemes"
 sleep $(($RANDOM % 10))
 updateRepo "Openbox"
+sleep $(($RANDOM % 10))
+updateRepo "Compton"
+sleep $(($RANDOM % 10))
+updateRepo "Mpd"
+sleep $(($RANDOM % 10))
+updateRepo "Ncmpcpp"

@@ -25,7 +25,7 @@ menu.*.bg.color: #2f343f
 menu.*.color: #d8dee8
 menu.title.text.color: #d8dee8
 menu.items.text.color: #d8dee8
-menu.items.active.text.color: #e5e9f0
+menu.items.active.text.color: #edf3ff
 menu.title.text.justify: center
 
 # OSD

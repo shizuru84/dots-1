@@ -38,7 +38,7 @@
 
 ! Settings
 URxvt.scrollBar:       false
-URxvt.internalBorder:  20
+URxvt.internalBorder:  25
 URxvt.letterSpace:     0
 URxvt.lineSpace:       0
 

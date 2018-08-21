@@ -44,6 +44,11 @@
             </item>
         </menu>
         <menu id="extras-menu" label="ETC">
+            <item label="Merge">
+                <action name="Execute">
+                    <execute>xrdb -merge .Xresources</execute>
+                </action>
+            </item>
             <item label="Reconfigure">
                 <action name="Reconfigure"/>
             </item>
