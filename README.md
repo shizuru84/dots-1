@@ -3,6 +3,7 @@
 ```
 Bin       > Personal Scripts
 Compton   > Compositor
+Discord   > Messaging
 Dunst     > Notification Manager
 Mpd       > Music Backend
 Ncmpcpp   > Music Player

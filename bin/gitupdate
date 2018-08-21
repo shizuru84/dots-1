@@ -100,6 +100,14 @@ updateRepo () {
             *)  FAIL "Zsh"
                 ;;
         esac
+    elif [ $1 = "Discord" ]; then
+        cp ~/DiscordThemes/* ~/.dotfiles/discord &>/dev/null
+        case $? in 
+            0)  PASS "Discord"
+                ;;
+            *)  FAIL "Discord"
+                ;;
+        esac
     fi
 }
 
@@ -130,3 +138,5 @@ sleep $(($RANDOM % 10))
 updateRepo "Vim"
 sleep $(($RANDOM % 10))
 updateRepo "Zsh"
+sleep $(($RANDOM % 10))
+updateRepo "Discord"
