@@ -81,7 +81,23 @@ updateRepo () {
         case $? in 
             0)  PASS "Ncmpcpp"
                 ;;
-            *)  PASS "Ncmpcpp"
+            *)  FAIL "Ncmpcpp"
+                ;;
+        esac
+    elif [ $1 = "Vim" ]; then
+        cp ~/.vimrc ~/.dotfiles/vim &>/dev/null
+        case $? in
+            0)  PASS "Vim"
+                ;;
+            *)  FAIL "Vim"
+                ;;
+        esac
+    elif [ $1 = "Zsh" ]; then
+        cp ~/.zshrc ~/.dotfiles/zsh &>/dev/null
+        case $? in 
+            0)  PASS "Zsh"
+                ;;
+            *)  FAIL "Zsh"
                 ;;
         esac
     fi
@@ -110,3 +126,7 @@ sleep $(($RANDOM % 10))
 updateRepo "Mpd"
 sleep $(($RANDOM % 10))
 updateRepo "Ncmpcpp"
+sleep $(($RANDOM % 10))
+updateRepo "Vim"
+sleep $(($RANDOM % 10))
+updateRepo "Zsh"
