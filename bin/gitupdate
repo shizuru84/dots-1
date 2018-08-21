@@ -44,6 +44,22 @@ updateRepo () {
             *)  FAIL "Rxvt-Unicode"
                 ;;
         esac
+    elif [ $1 = "OBThemes" ]; then
+        cp -r ~/.themes/* ~/.dotfiles/obthemes &> /dev/null
+        case $? in 
+            0)  PASS "OBThemes"
+                ;;
+            *)  FAIL "OBThemes"
+                ;;
+        esac
+    elif [ $1 = "Openbox" ]; then
+        cp ~/.config/openbox/* ~/.dotfiles/openbox &>/dev/null
+        case $? in
+            0)  PASS "Openbox"
+                ;;
+            *)  FAIL "Openbox"
+                ;;
+        esac
     fi
 }
 
@@ -60,3 +76,7 @@ sleep $(($RANDOM % 10))
 updateRepo "Dunst"
 sleep $(($RANDOM % 10))
 updateRepo "Terminal"
+sleep $(($RANDOM % 10))
+updateRepo "OBThemes"
+sleep $(($RANDOM % 10))
+updateRepo "Openbox"
