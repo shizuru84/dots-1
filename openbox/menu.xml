@@ -2,7 +2,7 @@
 <openbox_menu xmlns="http://openbox.org/3.4/menu">
     <menu id="root-menu" label="Openbox">
         <separator label=" Plasma "/>
-        <menu id="essentials-menu" label="Menu">
+        <menu id="essentials-menu" label="Essentials">
             <item label="Browser">
                 <action name="Execute">
                     <execute>firefox</execute>
@@ -31,6 +31,28 @@
                 </action>
             </item>
         </menu>
+        <menu id="productivity-menu" label="Productivity">
+            <item label="LibreWriter">
+                <action name="Execute">
+                    <execute>libreoffice --writer</execute>
+                </action>
+            </item>
+            <item label="LibreCalc">
+                <action name="Execute">
+                    <execute>libreoffice --calc</execute>
+                </action>
+            </item>
+            <item label="LibreDraw">
+                <action name="Execute">
+                    <execute>libreoffice --draw</execute>
+                </action>
+            </item>
+            <item label="LibreMath">
+                <action name="Execute">
+                    <execute>libreoffice --math</execute>
+                </action>
+            </item>
+        </menu>
         <menu id="gaming-menu" label="Gaming">
             <item label="Discord">
                 <action name="Execute">
@@ -51,6 +73,11 @@
             </item>
             <item label="Reconfigure">
                 <action name="Reconfigure"/>
+            </item>
+            <item label="Reboot">
+                <action name="Execute">
+                    <execute>reboot</execute>
+                </action>
             </item>
             <item label="Exit">
                 <action name="Exit"/>
