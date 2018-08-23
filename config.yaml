@@ -1,0 +1,80 @@
+options:
+    base: &base
+        dotfileDirectory: .dotfiles
+
+    vimDirectory: 
+        <<: *base
+        directoryName: vim
+        links:
+            - .vimrc: vimrc
+
+    binDirectory:
+        <<: *base
+        directoryName: bin
+        links:
+            - .scripts: bin
+
+    zshDirectory:
+        <<: *base
+        directoryName: zsh
+        links:
+            - .zshrc: zshrc
+            - .oh-my-zsh/themes/clair.zsh-theme: zsh-theme
+
+    discordDirectory:
+        <<: *base
+        directoryName: discord
+        links: 
+            - DiscordThemes/NordenLights.css: discordtheme
+
+    comptonDirectory:
+        <<: *base
+        directoryName: compton
+        links:
+            - .config/compton.conf: compton.conf
+
+    dunstDirectory:
+        <<: *base
+        directoryName: dunst
+        links:
+            - .config/dunst/dunstrc: dunstrc
+
+    mpdDirectory:
+        <<: *base
+        directoryName: mpd
+        links:
+            - .mpd/mpd.conf: conf
+
+    ncmpcppDirectory:
+        <<: *base
+        directoryName: ncmpcpp
+        links:
+            - .ncmpcpp/config: config
+
+    obthemesDirectory:
+        <<: *base
+        directoryName: obthemes
+        links:
+            - .themes: themes
+
+    openboxDirectory:
+        <<: *base
+        directoryName: openbox
+        links:
+            - .config/openbox/menu.xml: menu
+            - .config/openbox/rc.xml: rc
+            - .config/openbox/autostart: autostart
+
+    urxvtDirectory:
+        <<: *base
+        directoryName: urxvt
+        links:
+            - .Xresources: xresources
+
+    wallpaperDirectory:
+        <<: *base
+        directoryName: wallpaper
+        links:
+            - Wallpapers: wallpapers
+
+
