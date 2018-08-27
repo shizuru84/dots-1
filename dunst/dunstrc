@@ -1,177 +1,49 @@
 [global]
-    # Monitor
-    monitor = 0
-
-    # Focus
-    follow = mouse
-
-    # Geometry
-    geometry = "250x50+30+20"
-
-    # Show # of Hidden Notifs.
-    indicate_hidden = yes
-
-    # Shrink
-    shrink = no
-
-    # Transparency
-    transparency = 0
-
-    # Height
-    notification_height = 0
-
-    # Rounded Corners
-    corner_radius = 3
-
-    # Seperator
-    separator_height = 0
-
-    # Padding
-    padding = 16
-
-    # Hori. Padding
-    horizontal_padding = 16
-
-    # Frame
-    frame_width = 0
-
-    # Sort by urgency
-    sort = yes
-
-    # Removage
-    idle_threshold = 0
-
-    ### Text ###
-
-    font = RobotoMono Nerd Font 8
-
-    # Line Spacing
-    line_height = 4
-
-    # Notif. Formatting
-    format = "<b>%s</b>\n%b"
-
-    # Alignment
-    alignment = left
-
-    # Age
-    show_age_threshold = -1
-
-    # Wrap
-    word_wrap = yes
-
-    # Ignore \n
-    ignore_newline = no
-
-    # Merge Dups.
-    stack_duplicates = false
-
-    # Hide # of Merged
-    hide_duplicate_count = false
-
-    # (A) and (U) Indicators
-    show_indicators = yes
-
-    ### Icons ###
-
-    # Align icons left/right/off
-    icon_position = off
-
-    # Scale larger icons down to this size, set to 0 to disable
-    max_icon_size = 32
-
-    # Paths to default icons.
-    icon_folders = /usr/share/icons/gnome/16x16/status/:/usr/share/icons/gnome/16x16/devices/
-
-    ### History ###
-
-    # Should a notification popped up from history be sticky or timeout
-    # as if it would normally do.
-    sticky_history = yes
-
-    # Maximum amount of notifications kept in history
-    history_length = 20
-
-    ### Misc/Advanced ###
-
-    # dmenu path.
-    dmenu = /usr/bin/dmenu -p dunst:
-
-    # Browser for opening urls in context menu.
-    browser = /usr/bin/firefox -new-tab
-
-    # Always run rule-defined scripts, even if the notification is suppressed
-    always_run_script = true
-
-    # Define the title of the windows spawned by dunst
-    title = Dunst
-
-    # Define the class of the windows spawned by dunst
-    class = Dunst
-
-    # Print a notification on startup.
-    # This is mainly for error detection, since dbus (re-)starts dunst
-    # automatically after a crash.
-    startup_notification = false
-
-    ### Legacy
-
-    # Use the Xinerama extension instead of RandR for multi-monitor support.
-    # This setting is provided for compatibility with older nVidia drivers that
-    # do not support RandR and using it on systems that support RandR is highly
-    # discouraged.
-    #
-    # By enabling this setting dunst will not be able to detect when a monitor
-    # is connected or disconnected which might break follow mode if the screen
-    # layout changes.
-    force_xinerama = false
-
-# Experimental features that may or may not work correctly. Do not expect them
-# to have a consistent behaviour across releases.
-[experimental]
-    # Calculate the dpi to use on a per-monitor basis.
-    # If this setting is enabled the Xft.dpi value will be ignored and instead
-    # dunst will attempt to calculate an appropriate dpi value for each monitor
-    # using the resolution and physical size. This might be useful in setups
-    # where there are multiple screens with very different dpi values.
-    per_monitor_dpi = false
-
+monitor = 0
+follow = mouse
+geometry = "275x50-30+30"
+indicate_hidden = yes
+shrink = no
+separator_height = 0
+padding = 16
+horizontal_padding = 24
+frame_width = 2
+sort = no
+idle_threshold = 120
+font = RobotoMono Nerd Font 8
+line_height = 4
+markup = full
+alignment = left
+show_age_threshold = 60
+word_wrap = yes
+ignore_newline = no
+stack_duplicates = false
+hide_duplicate_count = yes
+show_indicators = no
+icon_position = off
+sticky_history = yes
+history_length = 20
+browser = /usr/bin/firefox -new-tab
+always_run_script = true
+title = Dunst
+class = Dunst
 [shortcuts]
-
-    # Shortcuts are specified as [modifier+][modifier+]...key
-    # Available modifiers are "ctrl", "mod1" (the alt-key), "mod2",
-    # "mod3" and "mod4" (windows-key).
-    # Xev might be helpful to find names for keys.
-
-    # Close notification.
-    close = ctrl+space
-
-    # Close all notifications.
-    close_all = ctrl+shift+space
-
-    # Redisplay last message(s).
-    # On the US keyboard layout "grave" is normally above TAB and left
-    # of "1". Make sure this key actually exists on your keyboard layout,
-    # e.g. check output of 'xmodmap -pke'
-    history = ctrl+grave
-
-    # Context menu.
-    context = ctrl+shift+period
-
+close = ctrl+space
+close_all = ctrl+shift+space
+history = ctrl+grave
+context = ctrl+shift+period
 [urgency_low]
-    # IMPORTANT: colors have to be defined in quotation marks.
-    # Otherwise the "#" and following would be interpreted as a comment.
-    background = "#2f343f"
-    foreground = "#f5f8f6"
-    timeout = 2
-
+timeout = 4
+background = "#2f343f"
+foreground = "#d8dee8"
+frame_color = "#a3be8c"
 [urgency_normal]
-    background = "#2f343f"
-    foreground = "#f5f8f6"
-    timeout = 4
-
+timeout = 8
+background = "#2f343f"
+foreground = "#d8dee8"
+frame_color = "#81a1c1"
 [urgency_critical]
-    background = "#2f343f"
-    foreground = "#f5f8f6"
-    frame_color = "#e3788f"
-    timeout = 0
+timeout = 0
+background = "#2f343f"
+foreground = "#d8dee8"
+frame_color = "#ebcb8b"

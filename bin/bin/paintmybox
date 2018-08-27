@@ -418,7 +418,7 @@ main () {
 	echo "$dunstrc" > ~/.config/dunst/dunstrc
 	dunst -format "<b>%s</b>\n%b" &
 	sendescape &
-	wallpaperpick
+	# wallpaperpick
 	openbox --reconfigure
 	tint2 &
 }
