@@ -1,18 +1,19 @@
 # Dippin' Dots
 
 ```
-Bin       > Personal Scripts
-Compton   > Compositor
-Discord   > Messaging
-Dunst     > Notification Manager
-Mpd       > Music Backend
-Ncmpcpp   > Music Player
-Obthemes  > Openbox Themes
-Openbox   > Openbox Settings
-Urxvt     > Terminal
-Vim       > Editor
-Wallpaper > Backgrounds
-Zsh       > Shell
+Bin         > Personal Scripts
+Compton     > Compositor
+Discord     > Messaging
+Dunst       > Notification Manager
+Mpd         > Music Backend
+Ncmpcpp     > Music Player
+Obthemes    > Openbox Themes
+Openbox     > Openbox Settings
+Screenshots > Ummm, ya know 
+Urxvt       > Terminal
+Vim         > Editor
+Wallpaper   > Backgrounds
+Zsh         > Shell
 ```
 
 ## Description
@@ -29,4 +30,4 @@ package management, and a stellar config system. ~~Let's ignore the fact I wrote
 
 ## Themes
 ### Opus
-![Opus](https://raw.githubusercontent.com/iiPlasma/dots/master/path/to/img.png)
+![Opus](https://raw.githubusercontent.com/iiPlasma/dots/master/screenshots/opus.png)
